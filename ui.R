@@ -10,14 +10,14 @@ ui <- fluidPage(
   
   fluidRow(
     column(12,
-           actionButton("toggleSidebar", "Filters", 
+           actionButton("toggleSidebar", "Toggle Filters", 
                         class = "btn-primary btn-sm",
                         style = "margin-bottom: 10px;")
     )
   ),
   
   conditionalPanel(
-    condition = "input.toggleSidebar % 2 == 1",  # Show when odd number of clicks
+    condition = "input.toggleSidebar % 2 == 0",  # Show when odd number of clicks
     wellPanel(
       fluidRow(
         column(6,
